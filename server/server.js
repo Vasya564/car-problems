@@ -9,7 +9,9 @@ const scrapeRoutes = require('./routes/scrapeRoutes')
 const app = express();
 
 // middleware
-app.use(cors())
+app.use(cors({
+  origin: process.env.ORIGIN
+}))
 app.use(express.json());
 
 // routes
