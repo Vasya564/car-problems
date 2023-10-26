@@ -12,6 +12,7 @@ const app = express();
 app.use(cors({
   origin: process.env.ORIGIN
 }))
+app.options('*', cors())
 app.use(express.json());
 
 // routes
