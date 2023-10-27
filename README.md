@@ -1,12 +1,13 @@
-﻿# Як запустити сайт
-### Сервер
+﻿# How to start
+### Server
 - cd server
-- npm i
+- npm run install-server
 - npm run start
-### Клієнт
+### Client
 - cd client
 - npm i
 - npm run dev
 
-Перейти в браузері на сторінку http://localhost:5173
-
+Go on http://localhost:5173
+OR
+Live demo https://car-client-tzc5.onrender.com/
