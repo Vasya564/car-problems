@@ -51,7 +51,7 @@ const CarProblem = () => {
     }
 
     const handleSaveData = () => { 
-        const textData = `${make.replace('/', '').toUpperCase()}\n${model.replace('/', '').toUpperCase()}\n${year.replace('/', '')}\n${category}\n${problems.join("\n")}`;
+        const textData = `${problems.join("\n")}`;
         const blob = new Blob([textData], { type: "text/plain" });
         const url = URL.createObjectURL(blob);
 
