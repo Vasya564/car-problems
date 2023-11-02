@@ -20,16 +20,12 @@ const CarSelector = () => {
   }, []);
     
   return (
-    <div>
-      <label>Make:</label>
+    <fieldset className='car-form'>
+      <legend>Select car:</legend>
       <MakeSelect carData={carData}/>
-      <br />
-      <label>Model:</label>
       <ModelSelect carData={carData}/>
-      <br />
-      <label>Year:</label>
       <YearSelect carData={carData}/>
-    </div>
+    </fieldset>
   );
 }
  

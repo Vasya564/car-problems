@@ -29,25 +29,24 @@ const CarCategory = () => {
     };
 
     return (
-        <div>
-            <form>
+        <fieldset>
+            <legend>Select problem category:</legend>
+            <div className="category-form">
                 {carCategories.map((option, index) => (
-                <div key={index}>
-                    <label>
-                        <input
-                        type="radio"
-                        name="radioGroup"
-                        value={option}
-                        checked={category === option}
-                        onChange={handleOptionChange}
-                        />
-                        {option}
-                    </label>
-                    <br />
-                </div>
+                <label key={index}>
+                    <input
+                    type="radio"
+                    name="radioGroup"
+                    value={option}
+                    checked={category === option}
+                    onChange={handleOptionChange}
+                    />
+                    {option}
+                    <hr />
+                </label>
                 ))}
-            </form>
-        </div>
+            </div>
+        </fieldset>
     );
 }
  

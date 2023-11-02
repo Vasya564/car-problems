@@ -22,7 +22,7 @@ const YearSelect = ({carData}) => {
             ?.models.find((m) => m.model === model)
             ?.years.map((y) => (
             <option key={y} value={y}>
-                {y}
+                {y.replace('/', '')}
             </option>
             ))}
         </select>

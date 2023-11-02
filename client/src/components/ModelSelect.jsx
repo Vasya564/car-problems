@@ -21,7 +21,7 @@ const ModelSelect = ({ carData }) => {
             .find((car) => car.make === make)
             ?.models.map((m) => (
             <option key={m.model} value={m.model}>
-                {m.model}
+                {m.model.replace('/', '').toUpperCase()}
             </option>
             ))}
         </select>

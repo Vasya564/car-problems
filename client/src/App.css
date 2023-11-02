@@ -1,6 +1,8 @@
 body{
   margin: 0;
   box-sizing: border-box;
+  background-color:lightgoldenrodyellow;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #root {
@@ -8,4 +10,90 @@ body{
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+label{
+  display: block;
+}
+
+button, select{
+  font-size: inherit;
+}
+
+button{
+  margin-top: 2rem;
+  padding: 8px 10px;
+  background-color:lightgreen;
+  border: 0;
+  border-radius: 4px;
+  transition: all .2s;
+}
+
+button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+fieldset{
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 400px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+fieldset + fieldset{
+  margin-top: 2rem;
+}
+
+select{
+  padding: 8px 10px;
+  border-radius: 4px;
+  width: 150px;
+  background: none;
+}
+
+.car-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-form{
+  margin: 0 auto;
+  width: max-content;
+  text-align: left;
+}
+
+.problem{
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 700px;
+}
+
+.problem-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.problem-list li{
+  display: block;
+}
+
+.problem-list-item{
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.problem-list-item + .problem-list-item{
+  margin-top: 1rem;
+}
+
+.problem-list-item h4{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }

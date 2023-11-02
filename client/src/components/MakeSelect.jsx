@@ -20,7 +20,7 @@ const MakeSelect = ({ carData }) => {
         <option value="">Select Make</option>
         {carData.map((car) => (
             <option key={car.make} value={car.make}>
-            {car.make}
+            {car.make.replace('/', '').toUpperCase()}
             </option>
         ))}
         </select>

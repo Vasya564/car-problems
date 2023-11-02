@@ -50,6 +50,20 @@ const CarProblem = () => {
             });
     }
 
+    const handleSaveData = () => { 
+        const textData = `${make.replace('/', '').toUpperCase()}\n${model.replace('/', '').toUpperCase()}\n${year.replace('/', '')}\n${category}\n${problems.join("\n")}`;
+        const blob = new Blob([textData], { type: "text/plain" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `${make.replace('/', '')}-${model.replace('/', '')}-${year.replace('/', '')}-${category}.txt`;
+
+        a.click();
+
+        URL.revokeObjectURL(url);
+    };
+
 
     return (
         <div>
@@ -59,14 +73,19 @@ const CarProblem = () => {
             ) : error ? (
                 <p>{error}</p> // Display the error message
             ) : (
-                <ul style={{ width: '700px', margin: '0 auto'}}>
-                    {problems && problems.map((data, index) => (
-                        <div key={index}>
-                            <li>{data}</li>
-                            <br />
-                        </div>
-                    ))}
-                </ul>
+                problems.length > 0 && (
+                <div className="problem">
+                    <ul className="problem-list">
+                        {problems.map((data, index) => (
+                            <div className="problem-list-item" key={index}>
+                                <h4>{category} №{index + 1}</h4>
+                                <li>{data}</li>
+                            </div>
+                        ))}
+                    </ul>
+                    <button onClick={handleSaveData}>Save results</button>
+                </div>
+                )
             )}
         </div>
     );
